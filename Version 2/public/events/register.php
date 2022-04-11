@@ -35,9 +35,7 @@ $events = $statement->fetchAll(PDO::FETCH_ASSOC); //fetch as associative array
       <li class="nav-item">
         <a class="nav-link" href="create.php">Create New Event</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="register.php">Register for Event</a>
-      </li>
+      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
           User
@@ -65,8 +63,8 @@ $events = $statement->fetchAll(PDO::FETCH_ASSOC); //fetch as associative array
 <center>
     <div class="badge badge-warning">
 <h3 class="card-body">
-&#128640; Live
-  <small class="text-muted">Events</small>
+&#128640; Register
+  <small class="text-muted">Now</small>
 </h3>
 </div>
 </center>
@@ -95,11 +93,7 @@ $events = $statement->fetchAll(PDO::FETCH_ASSOC); //fetch as associative array
         <td class="badge badge-pill badge-secondary"><?php echo $event['price']?></td>
         <td><?php echo $event['create_date']?></td>
         <td>
-            <a href="update.php?id=<?php echo $event['id'] ?>" class="btn btn-outline-primary btn-sm" >Edit</a>
-            <form method="post" action="delete.php">
-                <input type="hidden" name="id" value="<?php echo $event['id'] ?>">
-            <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
-    </form>
+            <a href="rform.php?id=<?php echo $event['id'] ?>" class="btn btn-outline-success btn-sm" >Register</a>
     </td>
 </tr>
 <?php endforeach; ?>

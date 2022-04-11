@@ -85,10 +85,49 @@ header('Location: index.php');
 </header>
 
 <br>
-<h1>Update Event <b class="badge badge-info"><?php echo $event['title']?></b><h1>
+<h1> Register in <b class="badge badge-warning"><?php echo $event['title']?></b><h1>
 </header>
 
-<?php include_once "../../views/products/form.php"?>
+
+<section class="card">
+        <div class="card-body">
+    <form action="rdata.php" method="post">
+
+    <?php if($event['image']): ?>
+        <img src="../<?php echo $event['image'] ?>" class="update-image">
+<?php endif ?>
+
+        
+<div class="form-group">
+        <label for="disabledTextInput">Event Title</label>
+        <div><input type="text" name="title" id="disabledTextInput" class="form-control" value="<?php echo $title ?>" disabled></div>
+</div>
+<div class="form-group">
+        <label>Your Full Name</label>
+        <div><input type="number" step=".01" name="price" class="form-control"></div>
+</div>
+<div class="form-group">
+        <label>Your Email</label>
+        <div><input type="number" step=".01" name="price" class="form-control"></div>
+</div>
+<div class="form-group">
+        <label>Your Phone Number</label>
+        <div><input type="number" step=".01" name="price" class="form-control"></div>
+</div>
+<div class="form-group">
+        <label>Your Age</label>
+        <div><input type="number" step=".01" name="price" class="form-control"></div>
+</div>
+<div class="form-group">
+        <label>Your University/College/School Name</label>
+        <div><input type="number" step=".01" name="price" class="form-control"></div>
+</div>
+<div>
+<button type="submit" name="submit" class="btn btn-success btn-lg">Register</button>
+    </div>
+    </form>
+    </div>
+    <section>
 
 
 

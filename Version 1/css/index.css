@@ -1,6 +1,6 @@
-body{
-    padding: 2%;
-}
+ body{
+    padding: 0%;
+} 
 
 .thumb-image{
     width: 50%;
@@ -9,3 +9,4 @@ body{
 .update-image{
      width: 120px;
 }
+

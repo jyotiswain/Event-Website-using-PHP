@@ -1,8 +1,8 @@
 <?php
 
-$title = $event['title'];
-$price = $event['price'];
-$description = $event['description'];
+// $title = $event['title'];
+// $price = $event['price'];
+// $description = $event['description'];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 $title = $_POST['title'];
@@ -15,7 +15,7 @@ if(!$title){
     $errors[]= 'Event Title is required!';
 }
 
-if(!$price){
+if(!$price){ 
     $errors[]= 'Event Registration Fee is required!';
 }
 
